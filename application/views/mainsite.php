@@ -29,7 +29,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Photo285</a> <!---------------ชื่อ PHOTO285------------------->
+				<a class="navbar-brand" href="userpage.php">Photo285</a> <!---------------ชื่อ PHOTO285------------------->
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
