@@ -161,7 +161,7 @@
 									 <label for="exampleInputFile">File input</label>
 								</div>
 								<div class="col-md-12">
-									<input type="file" name="photo" class="form-control" id="exampleInputPassword1" placeholder="Choose your profile Picture">
+									<input type="file" name="photo" class="form-control" >
 								</div>
 								<div class="col-md-12">
 								 <p class="help-block">Choose Your pro pic.</p>
