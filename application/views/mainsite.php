@@ -153,22 +153,7 @@
 								</div>
 							</div>
 						</div>  <!--ส่วนกรอก info------>
-						
-						
-						<div class="col-md-12"> <!--ส่วนเลือก PHOTO-->
-							<div class="form-group">
-								<div class="col-md-12">
-									 <label for="exampleInputFile">File input</label>
-								</div>
-								<div class="col-md-12">
-									<input type="file" name="photo" >
-								</div>
-								<div class="col-md-12">
-								 <p class="help-block">Choose Your pro pic.</p>
-								 </div>
-							</div>
-						</div> <!--ส่วนเลือก PHOTO-->
-						
+										
 						
 						<div class="col-md-12"> <!------ส่วนกด SUMMIT--->
 							<div class="col-md-12">
