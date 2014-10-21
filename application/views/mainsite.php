@@ -118,8 +118,8 @@
 							</div>
 						</div>  <!--ส่วนกรอก NAME------>
 						
-						<div class="col-md-12">  <!--ส่วนกรอก EMAIL----A-->
-							<div class="form-group">
+						<!--div class="col-md-12">  <!--ส่วนกรอก EMAIL----A-->
+							<!--div class="form-group">
 								<div class="col-md-12">
 									<label for="exampleInputEmail1">Email address</label>
 								</div>
