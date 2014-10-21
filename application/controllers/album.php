@@ -1,14 +1,17 @@
 <?
 
-class Member extends CI_Controller {
-	public function register(){
-			$ID = $_POST["ID"];
-			$name = $_POST["name"];
-			$pass = md5($_POST["pass"]);
-			$info = $_POST["info"];
-			$data = array('ID'=>$ID,'name'=>$name,'pass'=>$pass,'info' =>$info);
-			$this->load->model('member_model');	
-			$this->member_model->register($data);
-		}
+class Album extends CI_Controller {
+$query = $this->db->query('SELECT *, FROM my_table');
+
+foreach ($query->result() as $row)
+{
+    echo $row->ID;
+    echo $row->name;
+    echo $row->pass;
+	echo $row->info;
+}
+
+echo 'Total Results: ' . $query->num_rows();
+
 }
 ?>
