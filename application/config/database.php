@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'a0mds790rk.database.windows.net';
-$db['default']['username'] = 'gamegolf';
-$db['default']['password'] = 'Golfgolf1';
-$db['default']['database'] = 'eieidb';
+$db['default']['hostname'] = 'ez2klwo72c.database.windows.net';
+$db['default']['username'] = 'tinnooppo';
+$db['default']['password'] = 'Aa12345678';
+$db['default']['database'] = 'tinntinn';
 $db['default']['dbdriver'] = 'sqlsrv';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
