@@ -129,6 +129,7 @@
 							</div>
 						</div>  <!--ส่วนกรอก EMAIL------>
 						
+						
 						<div class="col-md-12"> <!--ส่วนกรอก PASSWAORD--A-->
 							<div class="form-group">
 								<div class="col-md-12">
@@ -139,6 +140,19 @@
 								</div>
 							</div>
 						</div> <!--ส่วนกรอก PASSWAORD---->
+						
+							<div class="col-md-12"> <!--ส่วนกรอก info----A-->
+							<div class="form-group">
+								<div class="col-md-12">
+									<label for="exampleInputName1">Information</label>
+								</div>
+								<div class="col-md-12">
+									<input type="text" name="info" class="form-control" id="exampleInputName1" placeholder="Enter name">
+								</div>
+							</div>
+						</div>  <!--ส่วนกรอก info------>
+						
+						
 						<div class="col-md-12"> <!------ส่วนกด SUMMIT--->
 							<div class="col-md-12">
 							<br><button type="submit" value="OK" class="btn btn-default">Submit</button></br>
