@@ -141,6 +141,8 @@
 							</div>
 						</div> <!--ส่วนกรอก PASSWAORD---->
 						
+					
+											
 							<div class="col-md-12"> <!--ส่วนกรอก info----A-->
 							<div class="form-group">
 								<div class="col-md-12">
@@ -151,6 +153,21 @@
 								</div>
 							</div>
 						</div>  <!--ส่วนกรอก info------>
+						
+						
+						<div class="col-md-12"> <!--ส่วนเลือก PHOTO-->
+							<div class="form-group">
+								<div class="col-md-12">
+									 <label for="exampleInputFile">File input</label>
+								</div>
+								<div class="col-md-12">
+									<input type="file" name="photo" class="form-control" id="exampleInputPassword1" placeholder="Choose your profile Picture">
+								</div>
+								<div class="col-md-12">
+								 <p class="help-block">Choose Your pro pic.</p>
+								 </div>
+							</div>
+						</div> <!--ส่วนเลือก PHOTO-->
 						
 						
 						<div class="col-md-12"> <!------ส่วนกด SUMMIT--->
