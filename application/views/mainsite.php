@@ -102,7 +102,7 @@
 										<br><label for="exampleInputUsername1">Username</label></br>
 									</div>
 									<div class="col-md-12">
-										<input type="text" name="ID" class="form-control " width = "50%" id="exampleInputUsername1" placeholder="Enter username">
+										<input type="text" name="IDmember" class="form-control " width = "50%" id="exampleInputUsername1" placeholder="Enter username">
 									</div>
 								</div>
 						</div> <!--ส่วนกรอก username------>
@@ -136,7 +136,7 @@
 									<label for="exampleInputPassword1">Password</label>
 								</div>
 								<div class="col-md-12">
-									<input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+									<input type="password" name="passwaord" class="form-control" id="exampleInputPassword1" placeholder="Password">
 								</div>
 							</div>
 						</div> <!--ส่วนกรอก PASSWAORD---->
