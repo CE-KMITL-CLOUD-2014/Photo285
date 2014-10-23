@@ -21,6 +21,11 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('mainsite');
 	}
+	
+	public function afterlogin()
+	{
+		$this->load->view('userpage');
+	}
 }
 
 /* End of file welcome.php */
