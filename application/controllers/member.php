@@ -2,9 +2,9 @@
 
 class Member extends CI_Controller {
 	public function register(){
-			$ID = $_POST["IDmember"];
+			$IDmember = $_POST["IDmember"];
 			$name = $_POST["name"];
-			$pass = md5($_POST["password"]);
+			$password = md5($_POST["password"]);
 			$info = $_POST["info"];
 			$data = array('ID'=>$ID,'name'=>$name,'pass'=>$pass,'info' =>$info);
 			$this->load->model('member_model');	
