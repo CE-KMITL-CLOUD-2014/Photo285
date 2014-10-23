@@ -1,5 +1,4 @@
 <?
-
 class Member extends CI_Controller {
 	public function register(){
 			$IDmember = $_POST["IDmember"];

@@ -124,17 +124,17 @@ $(function () {  <!-- credit : http://www.ninenik.com/%E0%B9%81%E0%B8%AA%E0%B8%9
  
  
  <div style="margin:auto;width:80%;">    
-        <h3> Create Your Album</h3>     
-        <form class="form" id="myFrom" method="post" action="show_data.php"  role="form" enctype="multipart/form-data">      
+        <h3> Create Album</h3>     
+        <form class="form" id="myFrom" method="post" action="../Photo/addphoto"  role="form" enctype="multipart/form-data">      
             <div class="form-group">    
-               <lable class="control-label">Your Album Name : </lable>    
-                <input type="text" autocomplete="off" class="form-control" name="name">    
+               <lable class="control-label">Album Name : </lable>    
+                <input type="text" autocomplete="off" class="form-control" name="nameAlbum">    
             </div>    
             <div class="form-group">    
-               <lable class="control-label">Picture : </lable>    
+               <lable class="control-label">Add Photo : </lable>    
                <input id="file_upload" style="display:none" name="file_upload[]" type="file" multiple="true">    
             <div id="upload" class="btn btn-info">  
-               Choose your picture File 
+               Choose Picture
             </div>  
             <div id="thumbnail"></div>                 
             </div>    
