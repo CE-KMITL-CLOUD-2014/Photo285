@@ -136,7 +136,7 @@
 									<label for="exampleInputPassword1">Password</label>
 								</div>
 								<div class="col-md-12">
-									<input type="password" name="passwaord" class="form-control" id="exampleInputPassword1" placeholder="Password">
+									<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 								</div>
 							</div>
 						</div> <!--ส่วนกรอก PASSWAORD---->
