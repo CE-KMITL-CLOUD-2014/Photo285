@@ -8,7 +8,7 @@ print_r($_FILES);
 </pre>  
 
 
-<?
+<?php
 
 class Photo extends CI_Controller {
 	public function addphoto(){
