@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
-
+	 <style type="text/css">  
+        .drop-area{  
+          width:100px; height:25px;  
+          border: 1px solid #999; text-align: center;  
+          padding:10px; cursor:pointer;  
+        }  
+        #thumbnail img{width:100px;height:100px;margin:5px;}  
+        canvas{border:1px solid red;}      
+    </style>  
     <!-- Bootstrap -->
      <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -46,16 +54,103 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" >  
+$(function () {  <!-- credit : http://www.ninenik.com/%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87_%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%A0%E0%B8%B2%E0%B8%9E_%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%AD%E0%B8%B1%E0%B8%9E%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94_%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2_html5_%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2-551.html >
+  
+  
+    $("#upload").on("click",function(e){  
+        $("#file_upload").show().click().hide();  
+        e.preventDefault();  
+    });  
+    $("#file_upload").on("change",function(e){  
+        var files = this.files  
+        showThumbnail(files)          
+    });  
+  
+    function showThumbnail(files){  
+  
+        $("#thumbnail").html("");  
+        for(var i=0;i<files.length;i++){  
+            var file = files[i]  
+            var imageType = /image.*/  
+            if(!file.type.match(imageType)){  
+                //     console.log("Not an Image");  
+                continue;  
+            }  
+  
+            var image = document.createElement("img");  
+            var thumbnail = document.getElementById("thumbnail");  
+            image.file = file;  
+            thumbnail.appendChild(image)  
+  
+            var reader = new FileReader()  
+            reader.onload = (function(aImg){  
+                return function(e){  
+                    aImg.src = e.target.result;  
+                };  
+            }(image))  
+  
+            var ret = reader.readAsDataURL(file);  
+            var canvas = document.createElement("canvas");  
+            ctx = canvas.getContext("2d");  
+            image.onload= function(){  
+                ctx.drawImage(image,100,100)  
+            }  
+        } // end for loop  
+  
+    } // end showThumbnail  
+  
+  
+      
+      
+});  
+ </script>      
 		
 
 		
 		<div class="col-xs-2 col-md-1">
 		<div class="row" align="center" >
 			<h3>Profile Description</h3>
-			<a href = "#">AddAlbum</a>
-			<a href = "#">DeleteAlbum</a>
+			<button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg"><a href = "#">AddAlbum</a></button>
+			<button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg"><a href = "#">DeleteAlbum</a></button>
 		</div>
 		</div>	
+		
+		
+		
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg">
+			<div class="modal-content">
+ 
+ 
+ <div style="margin:auto;width:80%;">    
+        <h3> บันทึกข้อมูล</h3>     
+        <form class="form" id="myFrom" method="post" action="show_data.php"  role="form" enctype="multipart/form-data">      
+            <div class="form-group">    
+               <lable class="control-label">Name : </lable>    
+                <input type="text" autocomplete="off" class="form-control" name="name">    
+            </div>    
+            <div class="form-group">    
+               <lable class="control-label">Picture : </lable>    
+               <input id="file_upload" style="display:none" name="file_upload[]" type="file" multiple="true">    
+            <div id="upload" class="btn btn-info">  
+               Upload File  
+            </div>  
+            <div id="thumbnail"></div>                 
+            </div>    
+            <button type="submit"  class="btn btn-primary">เพิ่มข้อมูล</button>               
+        </form>    
+        <br>    
+        		
+    </div>  
+	
+	
+	
+	
+  </div>
+			</div>
+		  </div>
+		</div>		
 		
 		
 		<div class="col-xs-10 col-md-11">
