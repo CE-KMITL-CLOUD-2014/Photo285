@@ -11,8 +11,8 @@ class Photo extends CI_Controller {
 		$this->load->model('photo_model');	
 		$this->photo_model->addphoto($data);
 		$timeupload = date("Y-m-d H:i:s");
-		var_dump($photo);
-		echo '5555';
+		//var_dump($photo);
+		echo "5555";
 	}
 
 }
