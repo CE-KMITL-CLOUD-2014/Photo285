@@ -124,21 +124,21 @@ $(function () {  <!-- credit : http://www.ninenik.com/%E0%B9%81%E0%B8%AA%E0%B8%9
  
  
  <div style="margin:auto;width:80%;">    
-        <h3> บันทึกข้อมูล</h3>     
+        <h3> Create Your Album</h3>     
         <form class="form" id="myFrom" method="post" action="show_data.php"  role="form" enctype="multipart/form-data">      
             <div class="form-group">    
-               <lable class="control-label">Name : </lable>    
+               <lable class="control-label">Your Album Name : </lable>    
                 <input type="text" autocomplete="off" class="form-control" name="name">    
             </div>    
             <div class="form-group">    
                <lable class="control-label">Picture : </lable>    
                <input id="file_upload" style="display:none" name="file_upload[]" type="file" multiple="true">    
             <div id="upload" class="btn btn-info">  
-               Upload File  
+               Choose your picture File 
             </div>  
             <div id="thumbnail"></div>                 
             </div>    
-            <button type="submit"  class="btn btn-primary">เพิ่มข้อมูล</button>               
+            <button type="submit"  class="btn btn-primary">Summit</button>               
         </form>    
         <br>    
         		
