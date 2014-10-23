@@ -26,6 +26,11 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('userpage');
 	}
+	
+	public function clickmanagealbum()
+	{
+		$this->load->view('managealbum');
+	}
 }
 
 /* End of file welcome.php */

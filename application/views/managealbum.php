@@ -7,7 +7,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,7 +17,7 @@
     <![endif]-->
   </head>
   <body>
-		<nav class="navbar navbar-default" role="navigation">
+   <nav class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -34,8 +34,8 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav navbar-right">
 					 <li class="dropdown">
-					 <li class="nonactive"><a href="../welcome/clickmanagealbum">Manage Album</a></li>
-					 <li class="active"><a href="#">username</a></li>
+					 <li class="active"><a href="#">Manage Album</a></li>
+					 <li class="nonactive"><a href="userpage.php">username</a></li>
 					 </li>
 				  </ul>
 				</div><!-- /.navbar-collapse -->
@@ -47,11 +47,13 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
 		
+
 		
 		<div class="col-xs-2 col-md-1">
 		<div class="row" align="center" >
 			<h3>Profile Description</h3>
-			<a href = "#">EditProfile</a>
+			<a href = "#">AddAlbum</a>
+			<a href = "#">DeleteAlbum</a>
 		</div>
 		</div>	
 		
@@ -76,7 +78,7 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail" data-toggle="modal" data-target=".bs-example-modal-lg1" >
+				<a href="" class="thumbnail" data-toggle="modal" data-target=".bs-example-modal-lg1" >
 					<img src="img/Jellyfish.jpg" alt="...">
 				</a>
 			</div>
@@ -96,74 +98,30 @@
 				</a>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail" data-toggle="modal" data-target=".bs-example-modal-lg1" >
-					<img src="img/Jellyfish.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail" data-toggle="modal" data-target=".bs-example-modal-lg2" >
-					<img src="img/Lighthouse.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail" data-toggle="modal" data-target=".bs-example-modal-lg3" >
-					<img src="img/Chrysanthemum.jpg" alt="...">
-				</a>
-			</div>
+			<div class="row">
 				<div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail" data-toggle="modal" data-target=".bs-example-modal-lg4" >
-					<img src="img/Hydrangeas.jpg" alt="...">
-				</a>
+					<a href="#" class="thumbnail" data-toggle="modal" data-target=".bs-example-modal-lg1" >
+						<img src="img/Jellyfish.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<a href="#" class="thumbnail" data-toggle="modal" data-target=".bs-example-modal-lg2" >
+						<img src="img/Lighthouse.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<a href="#" class="thumbnail" data-toggle="modal" data-target=".bs-example-modal-lg3" >
+						<img src="img/Chrysanthemum.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<a href="#" class="thumbnail" data-toggle="modal" data-target=".bs-example-modal-lg4" >
+						<img src="img/Hydrangeas.jpg" alt="...">
+					</a>
+				</div>
 			</div>
-		</div>
 		</div>	
 		
-    <!-- Modal -->
-	<div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content"> 
-				<div class= "row">
-					<img src="img/Jellyfish.jpg" alt="...">
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content"> 
-				<div class= "row">
-					<img src="img/Lighthouse.jpg" alt="...">
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="modal fade bs-example-modal-lg3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content"> 
-				<div class= "row">
-					<img src="img/Chrysanthemum.jpg" alt="...">
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="modal fade bs-example-modal-lg4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content"> 
-				<div class= "row">
-					<img src="img/Hydrangeas.jpg" alt="...">
-				</div>
-			</div>
-		</div>
-	</div>
-		
-		
-		
-	
 		
 		
   </body>
