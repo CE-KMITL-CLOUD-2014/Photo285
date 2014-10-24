@@ -8,7 +8,7 @@ class Photo extends CI_Controller {
 		$IDphoto = 5555;
 		$nameAlbum = $_POST["nameAlbum"];
 		$photo = $_POST["photo"];
-		$data = array('IDphoto'=>$IDphoto,'nameAlbum'=>$nameAlbum,'photo'=>$photo);
+		$data = array('IDphoto'=>$IDphoto,'nameAlbum'=>$nameAlbum,array('photo'=>$photo));
 		$this->load->model('photo_model');	
 		$this->photo_model->addphoto($data);
 		//$timeupload = date("Y-m-d H:i:s");*/
