@@ -125,7 +125,7 @@ $(function () {  <!-- credit : http://www.ninenik.com/%E0%B9%81%E0%B8%AA%E0%B8%9
  
  <div style="margin:auto;width:80%;">    
         <h3> บันทึกข้อมูล</h3>     
-        <form class="form" id="myFrom" method="post" action="show_data.php"  role="form" enctype="multipart/form-data">      
+        <form class="form" id="myFrom" method="post" action="../Photo/addphoto"  role="form" enctype="multipart/form-data">      
             <div class="form-group">    
                <lable class="control-label">Name : </lable>    
                 <input type="text" autocomplete="off" class="form-control" name="name">    
