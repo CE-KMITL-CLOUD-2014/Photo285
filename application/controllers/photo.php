@@ -5,7 +5,7 @@
 class Photo extends CI_Controller {
 	public function addphoto(){
 		echo "5555";
-		$IDphoto = $_POST["IDphoto"];
+		//$IDphoto = $_POST["IDphoto"];
 		$nameAlbum = $_POST["nameAlbum"];
 		$photo = $_POST["photo"];
 		$data = array('IDphoto'=>$IDphoto,'nameAlbum'=>$nameAlbum,'photo'=>$photo);
