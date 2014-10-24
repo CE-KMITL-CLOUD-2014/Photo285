@@ -133,7 +133,7 @@ $(function () {  <!-- credit : http://www.ninenik.com/%E0%B9%81%E0%B8%AA%E0%B8%9
             <div class="form-group">    
                <lable class="control-label">Add Photo : </lable>
 				<input id="#" style="display:none" name="IDphoto" type="file" multiple="true">			   
-               <input id="#" style="display:none" name="photo_upload" type="file" multiple="true">    
+               <input id="#" style="display:none" name="photo" type="file" multiple="true">    
             <div id="upload" class="btn btn-info">  
                Choose Picture
             </div>  
