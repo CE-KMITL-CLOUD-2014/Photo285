@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<form action="../Upload/do_upload">
+<form method="post" action="../Upload/do_upload" enctype="multipart/form-data" />
 <input type="file" name="userfile" size="20" />
 
 <br /><br />
