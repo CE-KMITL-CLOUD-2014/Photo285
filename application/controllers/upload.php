@@ -43,6 +43,7 @@ $this->upload->initialize($config);
 			$data = array('upload_data' => $this->upload->data());
 
 			$this->load->view('upload_success', $data);
+			echo"Success";
 		}
 		$field_name = "some_field_name";
 		$this->upload->do_upload($field_name)
