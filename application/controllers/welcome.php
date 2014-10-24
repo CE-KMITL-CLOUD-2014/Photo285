@@ -29,7 +29,7 @@ class Welcome extends CI_Controller {
 	
 	public function clickmanagealbum()
 	{
-		$this->load->view('managealbum');
+		$this->load->view('upload_form');
 	}
 }
 
