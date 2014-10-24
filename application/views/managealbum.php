@@ -128,11 +128,11 @@ $(function () {  <!-- credit : http://www.ninenik.com/%E0%B9%81%E0%B8%AA%E0%B8%9
         <form class="form" id="myFrom" method="post" action="../Photo/addphoto"  role="form" enctype="multipart/form-data">      
             <div class="form-group">    
                <lable class="control-label">Name : </lable>    
-                <input type="text" autocomplete="off" class="form-control" name="nameAlbum">    
+                <input type="text" autocomplete="off" class="form-control" name="name">    
             </div>    
             <div class="form-group">    
                <lable class="control-label">Picture : </lable>    
-               <input id="photo[]" style="display:none" name="photo[]" type="file" multiple="true">    
+               <input id="file_upload" style="display:none" name="file_upload[]" type="file" multiple="true">    
             <div id="upload" class="btn btn-info">  
                Upload File  
             </div>  
