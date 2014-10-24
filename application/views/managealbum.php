@@ -15,7 +15,7 @@
         canvas{border:1px solid red;}      
     </style>  
     <!-- Bootstrap -->
-     <link href="../css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,7 +53,7 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="../js/bootstrap.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" >  
 $(function () {  <!-- credit : http://www.ninenik.com/%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87_%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%A0%E0%B8%B2%E0%B8%9E_%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%AD%E0%B8%B1%E0%B8%9E%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94_%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2_html5_%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2-551.html >
   
@@ -124,22 +124,21 @@ $(function () {  <!-- credit : http://www.ninenik.com/%E0%B9%81%E0%B8%AA%E0%B8%9
  
  
  <div style="margin:auto;width:80%;">    
-        <h3> Create Album</h3>     
-        <form class="form" id="myFrom" method="post" action="../Photo/addphoto"  role="form" enctype="multipart/form-data">      
+        <h3> บันทึกข้อมูล</h3>     
+        <form class="form" id="myFrom" method="post" action="show_data.php"  role="form" enctype="multipart/form-data">      
             <div class="form-group">    
-               <lable class="control-label">Album Name : </lable>    
-                <input type="text" autocomplete="off" class="form-control" name="nameAlbum">    
+               <lable class="control-label">Name : </lable>    
+                <input type="text" autocomplete="off" class="form-control" name="name">    
             </div>    
             <div class="form-group">    
-               <lable class="control-label">Add Photo : </lable>
-			<!--<input id="IDphoto" style="display:none" name="IDphoto" type="file" multiple="true">-->			   
-               <input id="photo" style="display:none" name="photo" type="file" multiple="true">    
+               <lable class="control-label">Picture : </lable>    
+               <input id="file_upload" style="display:none" name="file_upload[]" type="file" multiple="true">    
             <div id="upload" class="btn btn-info">  
-               Choose Picture
+               Upload File  
             </div>  
             <div id="thumbnail"></div>                 
             </div>    
-            <button type="submit" value="OK" class="btn btn-primary">Summit</button>               
+            <button type="submit"  class="btn btn-primary">เพิ่มข้อมูล</button>               
         </form>    
         <br>    
         		
