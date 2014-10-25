@@ -10,13 +10,6 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
   </head>
   <body>
 	<nav class="navbar navbar-default" role="navigation">   <!--เริ่ม NAVBAR--------------->
@@ -29,7 +22,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="../welcome/afterlogin">Photo285</a> <!---------------ชื่อ PHOTO285------------------->
+				<a class="navbar-brand" href="#">Photo285</a> <!---------------ชื่อ PHOTO285------------------->
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -95,14 +88,14 @@
 			<div class="modal-content"> 
 				<div class= "row">
 					<form role="form" action="../member/register" method="post">  
-					
+						<br/>
 						<div class="col-md-12">  <!--ส่วนกรอก username----A-->
 								<div class="form-group">
 									<div class="col-md-12">
-										<br><label for="exampleInputUsername1">Username</label></br>
+										<label for="exampleInputUsername1">Username</label>
 									</div>
 									<div class="col-md-12">
-										<input type="text" name="IDmember" class="form-control " width = "50%" id="exampleInputUsername1" placeholder="Enter username">
+										<input type="text" name="ID" class="form-control " width = "50%" id="exampleInputUsername1" placeholder="Enter username" required autofocus>
 									</div>
 								</div>
 						</div> <!--ส่วนกรอก username------>
@@ -113,22 +106,21 @@
 									<label for="exampleInputName1">Name</label>
 								</div>
 								<div class="col-md-12">
-									<input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Enter name">
+									<input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Enter name" required autofocus>
 								</div>
 							</div>
 						</div>  <!--ส่วนกรอก NAME------>
 						
-						<!--div class="col-md-12">  <!--ส่วนกรอก EMAIL----A-->
-							<!--div class="form-group">
+						<div class="col-md-12">  <!--ส่วนกรอก EMAIL----A-->
+							<div class="form-group">
 								<div class="col-md-12">
 									<label for="exampleInputEmail1">Email address</label>
 								</div>
 								<div class="col-md-12">
-									<input type="text" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+									<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required autofocus>
 								</div>
 							</div>
 						</div>  <!--ส่วนกรอก EMAIL------>
-						
 						
 						<div class="col-md-12"> <!--ส่วนกรอก PASSWAORD--A-->
 							<div class="form-group">
@@ -136,28 +128,34 @@
 									<label for="exampleInputPassword1">Password</label>
 								</div>
 								<div class="col-md-12">
-									<input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+									<input type="password" name="pass" class="form-control" id="pass" placeholder="Password" required autofocus>
 								</div>
 							</div>
 						</div> <!--ส่วนกรอก PASSWAORD---->
 						
-					
-											
-							<div class="col-md-12"> <!--ส่วนกรอก info----A-->
+						<div class="col-md-12"> <!--ส่วนกรอก CONFIRMPASSWAORD--A-->
 							<div class="form-group">
 								<div class="col-md-12">
-									<label for="exampleInputName1">Information</label>
+									<label for="exampleInputPassword1">Confirm Password</label>
 								</div>
 								<div class="col-md-12">
-									<input type="text" name="info" class="form-control" id="exampleInputName1" placeholder="Enter name">
+									<input type="password" name="cpass" class="form-control" id="cpass" placeholder="Password" required autofocus>
 								</div>
 							</div>
-						</div>  <!--ส่วนกรอก info------>
-										
-						
+						</div> <!--ส่วนกรอก CONFIRMPASSWAORD---->
+						<script>
+						<!--เช็คpassword ว่าตรงกับ comfirm ไหม -->
+						$('form').on('submit',function(){
+						   if($('#pass').val()!=$('#cpass').val()){
+							   alert('Password not matches');
+							   return false;
+						   }
+						   return true;
+						});
+						</script>
 						<div class="col-md-12"> <!------ส่วนกด SUMMIT--->
 							<div class="col-md-12">
-							<br><button type="submit" value="OK" class="btn btn-default">Submit</button></br>
+							<button type="submit" value="OK" class="btn btn-default">Submit</button>
 							</div>
 						</div> <!------ส่วนกด SUMMIT--->
 					</form>
@@ -167,11 +165,11 @@
 	</div>  <!--ปิดส่วนเชื่อม แถบเด้งๆ-----ของ SIGN UP----->
 	
 	 <!-- Modal -->
-	<div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">  <!--ส่วนเชื่อม แถบเด้งๆ---ของ LOG IN------->
+<div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">  <!--?????????? ????????---??? LOG IN------->
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content"> 
 				<div class= "row">
-					<form class="form" role="form">
+					<form action="../member/login"  method="post" role="form">
 						<div class="col-md-12">
 							<div class="col-md-12">
 							<h2 class="form">Please sign in</h2>
@@ -179,12 +177,12 @@
 						</div>
 						<div class="col-md-12">
 							<div class="col-md-12">
-							<input type="email" class="form-control" placeholder="Email address" required autofocus>
+							<input type="username" name="ID" id="ID" class="form-control" placeholder="Username" required autofocus>
 							</div>
 						</div>
 						<div class="col-md-12">
 						<div class="col-md-12">
-							<input type="password" class="form-control" placeholder="Password" required>
+							<input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required>
 							</div>
 						</div>
 						<div class="col-md-12">
@@ -205,6 +203,10 @@
 				</div>
 			</div>
 		</div>
-	</div> <!--ส่วนเชื่อม แถบเด้งๆ---ของ LOG IN------->
+	</div> <!--?????????? ????????---??? LOG IN------->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
