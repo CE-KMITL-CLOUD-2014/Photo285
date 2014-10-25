@@ -2,7 +2,7 @@
 class Upload extends CI_Controller {
 public function uploaded(){
 $this->config =  array(
-				'file_name'    => $"eiei.jpg",
+				'file_name'    => "eiei.jpg",
                   'upload_path'     => "./files/",
                   'allowed_types'   => "gif|jpg|png|jpeg",
                   'overwrite'       => TRUE,
