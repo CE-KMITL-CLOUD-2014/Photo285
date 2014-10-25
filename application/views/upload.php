@@ -1,7 +1,7 @@
 <html>
 	<head></head>
 		<body>
-			<form action="../Upload/index" method="POST" enctype="multipart/form-data" >
+			<form action="../Upload/uploaded" method="POST" enctype="multipart/form-data" >
 				Select File To Upload:<br />
 				<input type="file" name="userfile"  />
 				<br /><br />

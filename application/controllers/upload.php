@@ -1,6 +1,6 @@
 <?php
 class Upload extends CI_Controller {
-	funtion index(){
+	funtion uploaded(){
 		$config =  array(
 					  'upload_path'     => "./files/",
 					  'allowed_types'   => "jpg|png|jpeg",
