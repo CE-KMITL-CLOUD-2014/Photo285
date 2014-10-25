@@ -1,7 +1,7 @@
 <?php
 class Upload extends CI_Controller {
 	funtion index(){
-		$this->config =  array(
+		$config =  array(
 					  'upload_path'     => "./files/",
 					  'allowed_types'   => "jpg|png|jpeg",
 					  'overwrite'       => TRUE,
@@ -10,7 +10,7 @@ class Upload extends CI_Controller {
 					  'max_width'       => "1024"  
 					);
 					
-		$this->load->library('upload', $this->config);
+		$this->load->library('upload', $config);
 		if($this->upload->do_upload())
 		{
 			echo "file upload success";
