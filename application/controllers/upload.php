@@ -10,6 +10,7 @@ $this->config =  array(
                   'max_width'       => "1024"  
                 );
 				$this->load->library('upload', $this->config);
+rename($data['file_name'], 'TINN'.$data['file_ext']); 			
 if($this->upload->do_upload())
 {
     echo "file upload success";
