@@ -1,6 +1,6 @@
 <?php
 class Upload extends CI_Controller {
-	public funtion uploaded(){
+	public function uploaded(){
 		echo "file upload success";
 	
 	}
