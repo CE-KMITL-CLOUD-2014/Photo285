@@ -2,6 +2,7 @@
 class Upload extends CI_Controller {
 public function uploaded(){
 $this->config =  array(
+				'file_name'    => "mypic.jpg",
                   'upload_path'     => "./files/",
                   'allowed_types'   => "gif|jpg|png|jpeg",
                   'overwrite'       => TRUE,
@@ -10,7 +11,7 @@ $this->config =  array(
                   'max_width'       => "1024"  
                 );
 				$this->load->library('upload', $this->config);
-	//rename(($this->upload->data())['file_name']), 'TINN'.($this->upload->data())['file_ext']); 
+	//rename(($this->upload->data['file_name']), 'TINN'.($this->upload->data['file_ext']); 
 				if($this->upload->do_upload())
 {
     echo "file upload success";
