@@ -11,10 +11,9 @@ $this->config =  array(
                 );
 				$this->load->library('upload', $this->config);
 	rename(($this->upload->data())['file_name']), 'TINN'.($this->upload->data())['file_ext']); 
-var_dump๖(this->upload->data());	
 				if($this->upload->do_upload())
 {
-    echo "file upload success";
+    var_dump((this->upload->data());	
 }
 else
 {
