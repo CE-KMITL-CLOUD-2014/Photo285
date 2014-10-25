@@ -21,6 +21,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('mainsite');
 	}
+	public function upload()
+	{
+		$this->load->view('upload');
+	}
 }
 
 /* End of file welcome.php */
