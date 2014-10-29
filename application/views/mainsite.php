@@ -145,17 +145,26 @@
 						</div> <!--ส่วนกรอก CONFIRMPASSWAORD---->
 						<script>
 						<!--เช็คpassword ว่าตรงกับ comfirm ไหม -->
-						$('form').on('submit',function(){
-						   if($('#pass').val()!=$('#cpass').val()){
-							   alert('Password not matches');
-							   return false;
-						   }
-						   return true;
+						function checkPasswordMatch() {
+							var password = $("#pass").val();
+							var confirmPassword = $("#cpass").val();
+							if (password != confirmPassword){
+								  $("#cpass").css( "background-color", "#F78181" );
+								  $("#regisbutton").prop("type", "button");	 
+							}
+							else{//เปลี่ยนสี
+								$("#cpass").css( "background-color", "#9FF781" );
+								$("#regisbutton").prop("type", "submit");
+							}
+						}
+						$(document).ready(function () {
+						   $("#cpass").keyup(checkPasswordMatch);					
 						});
 						</script>
+						
 						<div class="col-md-12"> <!------ส่วนกด SUMMIT--->
 							<div class="col-md-12">
-							<button type="submit" value="OK" class="btn btn-default">Submit</button>
+							<button type="submit" value="OK" id ="regisbutton" class="btn btn-default">Submit</button>
 							</div>
 						</div> <!------ส่วนกด SUMMIT--->
 					</form>
@@ -183,15 +192,6 @@
 						<div class="col-md-12">
 						<div class="col-md-12">
 							<input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required>
-							</div>
-						</div>
-						<div class="col-md-12">
-						<div class="col-md-12">
-							<label class="checkbox">
-								<div class="col-md-12">
-									<br><input type="checkbox" value="remember-me"> Remember me
-								</div>
-							</label>
 							</div>
 						</div>
 						<div class="col-md-12">
