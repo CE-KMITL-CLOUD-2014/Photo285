@@ -408,10 +408,10 @@ html, body { height: 100%;}
                   <div class="img-poster clearfix">
 						<a href=""><img class="img-circle" src="http://www.localcrimenews.com/wp-content/uploads/2013/07/default-user-icon-profile.png"/><!--รูปของเจ้าของภาพ--></a>
 						<strong><a href="">Jone Doe<!--ชื่อคนcomment--></a></strong>
-						<button type="button" class="btn btn-warning btn-md">
+						<button type="button" class="btn btn-default btn-md">
 							<span class="glyphicon glyphicon-trash"  aria-hidden="true" ></span>
 						</button>
-						<button  class="btn btn-info btn-md" data-toggle="modal" data-target=".bs-example-modal-lg4" ><span class="glyphicon glyphicon-globe" > เลือกรูปหน้าหลัก</span></button>
+						<button  class="btn btn-default btn-md" data-toggle="modal" data-target=".bs-example-modal-lg4" ><span class="glyphicon glyphicon-globe" > เลือกรูปหน้าหลัก</span></button>
 					</div>
 					<ul class="img-comment-list">
 					<?if($comment==NULL)//ตรวจสอบว่า มีcomment ไหม? ถ้าไม่มี ทำ if
