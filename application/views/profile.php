@@ -4,18 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Photo285 : Upload Your Picture</title>
 
     <!-- Bootstrap -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	<style>
+	
+	<style> <!--ส่วนตั้งค่า รูป และ Light box นำค่ามาจาก bootsnipp.com-->
 	body {
     padding: 30px 0px;
 }
@@ -35,8 +29,14 @@
     position: absolute;
     top: -15px;
     right: -55px;
-    
     z-index:1032;
+}
+
+ .link
+{
+   color:white;
+   text-decoration: none; 
+   background-color: none; <!--Link remove href-->
 }
 
 .box > .icon { text-align: center; position: relative; }
@@ -53,12 +53,13 @@
 .box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #63B76C; }
 .box .space { height: 30px; }
 	</style>
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../js/bootstrap.min.js"></script>
-	
-	<script>
+	<script src="../../js/font-awesome.min.css"></script>
+	<script> <!--ส่วน lightbox-->
 	$(document).ready(function() {
     var $lightbox = $('#lightbox');
     
@@ -79,7 +80,6 @@
     
     $lightbox.on('shown.bs.modal', function (e) {
         var $img = $lightbox.find('img');
-            
         $lightbox.find('.modal-dialog').css({'width': $img.width()});
         $lightbox.find('.close').removeClass('hidden');
     });
@@ -87,27 +87,30 @@
 	</script>
 
   </head>
-  <body>
+  <body background="../../img/white.jpg"> <!---body ที่ใส่ background เข้าไปด้วย--->
 	   <div class="container">
-			<div class="col-md-3 col-xs-12 col-sm-12">
-					
+			<div class="col-md-3 col-xs-12 col-sm-12"> <!--colในส่วนซ้าย ที่มี รายละเอียดของผู้ใช้งาน-->
 				  <div class="col-md-12 col-xs-12 col-sm-12">
 						<center>
-							<a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
-							<h3><? echo $id; ?></h3>
+							<a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="../../../photo/profile/<? echo "".$this->uri->segment(3).".jpg"; ?>" name="aboutme" width="140" height="140" class="img-circle"></a>
+							<h3>
+								<? echo"".$name; ?>
+							</h3>
 							<em>
-								<?
-									$data = $this->db->where('ID',$id)->get('account');
-										foreach($data->result_array() as $row){
-											echo"email: ".$row['email'];
-										}
-								?>
+								<? echo"email: ".$email; ?>
 							</em>
 						</center>
 					</div>
 					
 					<!-- Boxes de Acoes -->
 					<div class="col-md-12 col-xs-12 col-sm-12">
+						<div class="row">
+						<center>
+							<br>
+							<a href="../../album/show/<? echo "".$this->uri->segment(3); ?>"><button type="button" class="btn btn-primary navbar-btn"><div class="link">See More Album</div></button></a> <!-----see album----->
+						</center>
+						</ul>
+					</div>
 						<div class="box">							
 							<div class="icon">
 								</br>
@@ -115,12 +118,7 @@
 								<div class="info">
 									<h3 class="title">ข่าวสาร</h3>
 									<p>
-										<?
-											$data = $this->db->where('ID',$id)->get('account');
-												foreach($data->result_array() as $row){
-													echo"".$row['detail'];
-												}
-										?>
+										<? echo"".$detail; ?>
 									</p>
 								</div>
 							</div>
@@ -129,46 +127,31 @@
 					</div>
 					
 				
-			<!-- Modal -->
+			<!-- Modal ที่เด้งโชว์ผู้ใช้ แสดงประวัตส่วนตัว--> 
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
 								<h4 class="modal-title" id="myModalLabel">
-									<?
-										$data = $this->db->where('ID',$id)->get('account');
-											foreach($data->result_array() as $row){
-												echo"".$row['name'];
-											}
-									?>
+									<? echo"".$id; ?>
 								</h4>   <!--ดึงชื่อมาจาก db-->
 							</div>
 							<div class="modal-body">
 								<center>
-									<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+									<img src="../../../photo/profile/<? echo "".$this->uri->segment(3).".jpg" ?>" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
 									
 									<h3 class="media-heading"><? echo $id; ?></h3> <!--รับตัวแปร id มาจาก controller-->
 									<span><strong>Email: </strong></span>
 									<span>
 									<!--ดึงข้อมูลจาก db มาแสดง email-->
-										<?
-											$data = $this->db->where('ID',$id)->get('account');
-												foreach($data->result_array() as $row){
-													echo"".$row['email'];
-												}
-										?>
+										<? echo"".$email; ?>
 									</span>
 								</center>
 								<hr>
 								<center>
 								<p class="text-left"><strong>ประวัติส่วนตัว: </strong><br>
-									<?
-										$data = $this->db->where('ID',$id)->get('account');
-											foreach($data->result_array() as $row){
-												echo"".$row['resume'];
-											}
-									?>								
+									<? echo"".$resume; ?>								
 								
 								</p>   <!--ต้องเปลี่ยนเป็นชื่อคัวแปร-->
 								<br>
@@ -183,43 +166,40 @@
 					</div>
 				</div>				
 			</div>
-		<div class="col-md-9 col-xs-0 col-sm-0">
-			<div class="col-md-4 col-xs-6 col-sm-3">
-				<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
-					<img src="https://s3.amazonaws.com/ooomf-com-files/lqCNpAk3SCm0bdyd5aA0_IMG_4060_1%20copy.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-md-4 col-xs-6 col-sm-3">
-				<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
-					<img src="https://s3.amazonaws.com/ooomf-com-files/deYU3EyQP9cN23moYfLw_Dandelion.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-md-4 col-xs-6 col-sm-3">
-				<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
-					<img src="https://s3.amazonaws.com/ooomf-com-files/8H0UdTsvRFqe03hZkNJr_New%20York%20-%20On%20the%20rock%20-%20Empire%20State%20Building.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-md-12 col-xs-6 col-sm-3">
-				<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
-					<img src="https://s3.amazonaws.com/ooomf-com-files/Z3LXxzFMRe65FC3Dmhnp_woody_unsplash_DSC0129.jpg" alt="...">
-				</a>
+			<div class="col-md-9 col-xs-0 col-sm-0"> <!---ส่วนที่ col แสดงรูปภาพที่ต้องการแสดง-->
+				<div class="col-md-4 col-xs-6 col-sm-3">
+					<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
+						<img src="https://s3.amazonaws.com/ooomf-com-files/lqCNpAk3SCm0bdyd5aA0_IMG_4060_1%20copy.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-md-4 col-xs-6 col-sm-3">
+					<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
+						<img src="https://s3.amazonaws.com/ooomf-com-files/deYU3EyQP9cN23moYfLw_Dandelion.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-md-4 col-xs-6 col-sm-3">
+					<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
+						<img src="https://s3.amazonaws.com/ooomf-com-files/8H0UdTsvRFqe03hZkNJr_New%20York%20-%20On%20the%20rock%20-%20Empire%20State%20Building.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-md-12 col-xs-6 col-sm-3">
+					<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
+						<img src="https://s3.amazonaws.com/ooomf-com-files/Z3LXxzFMRe65FC3Dmhnp_woody_unsplash_DSC0129.jpg" alt="...">
+					</a>
+				</div>
+			</div>	
+		</div>
+
+		<!--modal ที่รูป จะเด้งขึ้นมา--->
+		<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+				<div class="modal-content">
+					<div class="modal-body">
+						<img src="" alt="" />		
+					</div>
+				</div>
 			</div>
 		</div>
-			
-</div>
-
-<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
-        <div class="modal-content">
-            <div class="modal-body">
-                <img src="" alt="" />
-				
-				
-            </div>
-        </div>
-    </div>
-</div>
-
-  </body>
+	</body>
 </html>

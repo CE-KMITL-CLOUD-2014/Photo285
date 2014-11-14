@@ -9,9 +9,23 @@ class Profile extends CI_Controller {
 			</script>";
 		}
 		else{
-			$id = $this->uri->segment(3); // ถ้ามี / อันที่ 3 เช่น (web.net/profile/show/admin) user คือ admin ก็เอามาเก็บในตัวแปล id
-			$data['id'] = $id;
-			$this->load->view('profile',$data);
+			$check = $this->db->where('ID',$this->uri->segment(3))->count_all_results('account');
+			if($check==1){ // เช็คว่าใส่ profile ถูกไหม
+				$id = $this->uri->segment(3); // ถ้ามี / อันที่ 3 เช่น (web.net/profile/show/admin) user คือ admin ก็เอามาเก็บในตัวแปล id
+	
+				//load-
+				$this->load->model('member_model');
+				$name = $this->member_model->getName($id);
+				$email = $this->member_model->getEmail($id);
+				$detail = $this->member_model->getDetail($id);
+				$resume = $this->member_model->getResume($id);
+				$data = array('name' => $name , 'id' => $id , 'email' => $email , 'detail' => $detail , 'resume' => $resume);
+				
+				$this->load->view('navbar');
+				$this->load->view('profile',$data);
+			}
+			else echo"<script language='javascript'>window.location.href = '../../';</script>"; //ถ้า profile ไม่ถูก redirect ไปหน้าแรก
+
 		}
 	}
 }

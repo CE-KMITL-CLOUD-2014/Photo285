@@ -1,5 +1,4 @@
 <?
-
 class Member extends CI_Controller {
 	public function register(){
 		$ID = $_POST["ID"];
@@ -14,6 +13,7 @@ class Member extends CI_Controller {
 			window.location.href = '../';
 			</script>";
 	}
+	
 	public function login(){
 		$ID = $_POST["ID"];
 		$pass = md5($_POST["pass"]);
@@ -22,6 +22,7 @@ class Member extends CI_Controller {
 			$newdata = array('ID' => $ID,'logged_in' => TRUE);
 			$this->session->set_userdata($newdata);
 			echo"<script language='javascript'>window.location.href = '../profile/show/".$ID."';</script>"; //redirect หน้าหลัง login
+			
 		}
 		else {
 			echo "<script language='javascript'>
@@ -30,8 +31,42 @@ class Member extends CI_Controller {
 				</script>";
 		}
 	}
+	
 	public function logout(){
 		$this->session->sess_destroy();
+		echo"<script language='javascript'>window.location.href = '../../';</script>";
 	}
+	
+	public function editProfile(){
+		if($this->session->userdata('ID')){
+			$ID = $this->session->all_userdata();
+			
+			//load all
+			$this->load->model('member_model');
+			$name = $this->member_model->getName($ID['ID']);
+			$email = $this->member_model->getEmail($ID['ID']);
+			$detail = $this->member_model->getDetail($ID['ID']);
+			$resume = $this->member_model->getResume($ID['ID']);
+			$data = array('name' => $name , 'id' => $ID['ID'] , 'email' => $email , 'detail' => $detail , 'resume' => $resume);
+			$this->load->view('navbar');
+			$this->load->view('editprofile',$data);
+		}
+		else $this->load->view('mainsite');
+	}
+	
+	public function editProfileSend(){
+		$name = $_POST["name"];
+		$resume = $_POST["resume"];
+		$detail = $_POST["detail"];
+		$data = array('name'=>$name,'resume'=>$resume,'detail'=>$detail);
+		$this->load->model('member_model');
+		$this->member_model->editprofile($data);
+		//echo"<script language='javascript'>
+		//	alert('Edit done');
+		//	window.location.href = '../';
+		//	</script>";
+	
+	}
+	
 }
 ?>

@@ -3,11 +3,10 @@
 class Test extends CI_Controller {
 
 	public function index(){
-		$this->load->view('test.php');
-	}
-	
-	public function endses(){
-		$this->session->sess_destroy();
-	}
+		$check = $this->db->where('nameuser','admin')->get('picture');
+		foreach($check->result_array() as $row){
+			echo"".$row['namealbum'];
+		}
+	}	
 }
 
