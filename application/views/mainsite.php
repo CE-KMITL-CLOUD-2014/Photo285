@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Photo285 : Upload Your Picture</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 	<style> <!--ส่วนตั้งค่ารูปนำโค้ดมาจาก bootsnipp.com-->
 	<!--ตั้งค่ารูป ใน dynamic tile--->
 .dynamicTile .col-sm-2.col-xs-4{
@@ -76,8 +76,8 @@
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-	<script src="js/font-awesome.min.css"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/font-awesome.min.css"></script>
 	<script> <!--ส่วนตั้งเวลา ไสลด์รูป-->
 		$(window).resize(function() {
 		if(this.resizeTO) clearTimeout(this.resizeTO);
@@ -92,7 +92,7 @@
 
     // Disallow anything not matching the regex pattern (A to Z uppercase, a to z lowercase and white space)
     // For more on JavaScript Regular Expressions, look here: https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Regular_Expressions
-    var englishAlphabetAndWhiteSpace = /[A-Za-z ]/g;
+    var englishAlphabetAndWhiteSpace= /[A-Z0-9a-z]/g;
    
     // Retrieving the key from the char code passed in event.which
     // For more info on even.which, look here: http://stackoverflow.com/q/3050984/114029
@@ -105,7 +105,7 @@
     // keyCode == 37 is left arrow
     // keyCode == 39 is right arrow
     // englishAlphabetAndWhiteSpace.test(key) does the matching, that is, test the key just typed against the regex pattern
-	 if (englishAlphabetAndWhiteSpace.test(key)) {
+	 if (event.keyCode == 8 || englishAlphabetAndWhiteSpace.test(key)) {
         return true;
     }
 
@@ -458,22 +458,22 @@ $('#mytextbox').on("paste",function(e)
 					<form action="../member/login"  method="post" role="form">
 						<div class="col-md-12">
 							<div class="col-md-12">
-								<h2 class="form">Please sign in</h2>
+							<h2 class="form">Please log in</h2>
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="col-md-12">
-								<input type="username" name="ID" id="ID" class="form-control" placeholder="Username" required autofocus> <!--กรอก username--->
+							<input type="username" name="ID" id="ID" class="form-control" placeholder="Username" required autofocus>
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="col-md-12">
-								<input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required> <!--กรอก password-->
+								<input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required>
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="col-md-12">
-								<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button></br>
+								<button class="btn btn-lg btn-success btn-block" type="submit">Log in</button></br>
 							</div>
 						</div>
 					</form>

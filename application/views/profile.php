@@ -87,7 +87,7 @@
 	</script>
 
   </head>
-  <body background="../../img/white.jpg"> <!---body ที่ใส่ background เข้าไปด้วย--->
+  <body background="../../../img/white.jpg"> <!---body ที่ใส่ background เข้าไปด้วย--->
 	   <div class="container">
 			<div class="col-md-3 col-xs-12 col-sm-12"> <!--colในส่วนซ้าย ที่มี รายละเอียดของผู้ใช้งาน-->
 				  <div class="col-md-12 col-xs-12 col-sm-12">
@@ -107,7 +107,7 @@
 						<div class="row">
 						<center>
 							<br>
-							<a href="../../album/show/<? echo "".$this->uri->segment(3); ?>"><button type="button" class="btn btn-primary navbar-btn"><div class="link">See More Album</div></button></a> <!-----see album----->
+							<a href="../../../album/show/<? echo "".$this->uri->segment(3); ?>"><button type="button" class="btn btn-primary navbar-btn"><div class="link">See More Album</div></button></a> <!-----see album----->
 						</center>
 						</ul>
 					</div>
@@ -168,38 +168,26 @@
 			</div>
 			<div class="col-md-9 col-xs-0 col-sm-0"> <!---ส่วนที่ col แสดงรูปภาพที่ต้องการแสดง-->
 				<div class="col-md-4 col-xs-6 col-sm-3">
-					<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
-						<img src="https://s3.amazonaws.com/ooomf-com-files/lqCNpAk3SCm0bdyd5aA0_IMG_4060_1%20copy.jpg" alt="...">
+					<a href="../../../../onephoto/show/<? echo"".$photom1 ?>" class="thumbnail" > 
+						<img src="../../../../photo/<?echo"".$photom1.".jpg";?>" alt="..."width='220' height='220'>
 					</a>
 				</div>
 				<div class="col-md-4 col-xs-6 col-sm-3">
-					<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
-						<img src="https://s3.amazonaws.com/ooomf-com-files/deYU3EyQP9cN23moYfLw_Dandelion.jpg" alt="...">
+					<a href="../../../../onephoto/show/<? echo"".$photom2 ?>" class="thumbnail"> 
+						<img src="../../../../photo/<?echo"".$photom2.".jpg";?>" alt="..."width='220' height='220'>
 					</a>
 				</div>
 				<div class="col-md-4 col-xs-6 col-sm-3">
-					<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
-						<img src="https://s3.amazonaws.com/ooomf-com-files/8H0UdTsvRFqe03hZkNJr_New%20York%20-%20On%20the%20rock%20-%20Empire%20State%20Building.jpg" alt="...">
+					<a href="../../../../onephoto/show/<? echo"".$photom3 ?>" class="thumbnail" > 
+						<img src="../../../../photo/<?echo"".$photom3.".jpg";?>" alt="..." width='220' height='220'>
 					</a>
 				</div>
 				<div class="col-md-12 col-xs-6 col-sm-3">
-					<a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> 
-						<img src="https://s3.amazonaws.com/ooomf-com-files/Z3LXxzFMRe65FC3Dmhnp_woody_unsplash_DSC0129.jpg" alt="...">
+					<a href="../../../../onephoto/show/<? echo"".$photom4 ?>" class="thumbnail" > 
+						<img src="../../../../photo/<?echo"".$photom4.".jpg";?>" alt="..."width='500' height='500'>
 					</a>
 				</div>
 			</div>	
-		</div>
-
-		<!--modal ที่รูป จะเด้งขึ้นมา--->
-		<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
-				<div class="modal-content">
-					<div class="modal-body">
-						<img src="" alt="" />		
-					</div>
-				</div>
-			</div>
 		</div>
 	</body>
 </html>
